@@ -23,6 +23,10 @@ Implementation of L3 Switch using `OVS`(open vswitch) with `POX` as controller.
 
 ![](img/pox-l3.png)
 
+* Flows Installed in OVS:
+
+![](img/flow_dumps.png)
+
 ## Requirements
 
 - `POX` controller <https://github.com/noxrepo/pox>
