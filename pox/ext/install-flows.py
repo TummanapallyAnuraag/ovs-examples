@@ -346,23 +346,25 @@ class l3_switch (EventMixin):
       for port in event.ofp.ports:
           log.debug("%s", port)
 
-
-      with open('routes.csv', 'rt') as f:
-          data = csv.reader(f)
+      with open('routes.csv', 'r') as file:
+          data = csv.reader(file)
           for row in data:
-              actions = []
-              actions.append(of.ofp_action_output(port = row[1]))
+              log.debug(" >> %s << ", row)
               ip, prefix = row[0].split('/')
-              prefix = int(prefix)
-              log.debug("%s %s %s", ip,prefix, row[1])
-              match = of.ofp_match(dl_type = pkt.ethernet.IP_TYPE,
-                        nw_dst = (IPAddr(ip), prefix ))
+              actions = []
+              actions.append(of.ofp_action_output(port = int(row[1])))
+              match = of.ofp_match()
+              match.dl_type = pkt.ethernet.IP_TYPE
+              match.nw_dst = (IPAddr(ip),prefix)
               msg = of.ofp_flow_mod(command=of.OFPFC_ADD,
                                     idle_timeout=FLOW_IDLE_TIMEOUT,
                                     hard_timeout=of.OFP_FLOW_PERMANENT,
                                     actions=actions,
                                     match=match)
               event.connection.send(msg.pack())
+
+
+      log.debug("routes added!")
       return
 
 
