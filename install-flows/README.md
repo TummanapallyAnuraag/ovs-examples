@@ -1,8 +1,8 @@
-#Install Flows
+# Install Flows
 
 Flows installed in the `OpenVSwitch`
 
-[Installed Flows](ovs-flows.png)
+![Installed Flows](ovs-flows.png)
 
 * All the required scripts are in `scripts` folder
 
