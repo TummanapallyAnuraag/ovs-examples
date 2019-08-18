@@ -60,3 +60,18 @@ sudo rm /sys/fs/bpf/tc/globals/routes
 ```
 
 ![Commands](img/bpf-commands-2.png)
+
+
+## Useful Resources:
+
+Following links will be really helpful, for any coding related to eBPF.
+
+* <https://github.com/cilium/cilium/blob/master/bpf/lib/xdp.h>
+
+* <https://github.com/cilium/cilium/blob/master/bpf/bpf_xdp.c>
+
+* <http://man7.org/linux/man-pages/man8/tc-bpf.8.html#top_of_page>
+
+* <https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/tree/examples/bpf/bpf_shared.c>
+
+* <https://askubuntu.com/questions/1134896/ebpf-maps-how-to-update-using-bpftool-from-command-line>
