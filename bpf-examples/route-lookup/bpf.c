@@ -48,6 +48,20 @@ struct bpf_elf_map SEC("maps") routes = {
 	.pinning	= PIN_GLOBAL_NS,
 	.max_elem	= BPF_MAX_MARK,
 };
+struct bpf_elf_map SEC("maps") mac_src = {
+       .type           =       BPF_MAP_TYPE_ARRAY,
+       .size_key       =       sizeof(int),
+       .size_value     =       6*sizeof(__u8),
+       .max_elem       =       4,
+       .pinning        =       PIN_GLOBAL_NS,
+};
+struct bpf_elf_map SEC("maps") mac_dst = {
+       .type           =       BPF_MAP_TYPE_ARRAY,
+       .size_key       =       sizeof(int),
+       .size_value     =       6*sizeof(__u8),
+       .max_elem       =       4,
+       .pinning        =       PIN_GLOBAL_NS,
+};
 
 SEC("classifier")
 int cls_main(struct __sk_buff *skb){
@@ -92,8 +106,36 @@ int pingpong(struct __sk_buff *skb){
     if(interface){
         trace_printk("TRIE hit!, output=%d\n", interface->flags);
 		if(interface->flags == 0){
-			
+
 		}else{
+			__u8 src_mac[ETH_ALEN] = {0,0,0,0,0,0};
+			__u8 dst_mac[ETH_ALEN] = {0,0,0,0,0,0};
+			__u8 *val;
+			int interface_no = interface->flags;
+			val = bpf_map_lookup_elem(&mac_src, &interface_no);
+			if(val){
+				src_mac[0] = val[0];
+				src_mac[1] = val[1];
+				src_mac[2] = val[2];
+				src_mac[3] = val[3];
+				src_mac[4] = val[4];
+				src_mac[5] = val[5];
+			}else{
+				trace_printk("interface: %x\n", interface_no);
+			}
+			val = bpf_map_lookup_elem(&mac_dst, &interface_no);
+			if(val){
+				dst_mac[0] = val[0];
+				dst_mac[1] = val[1];
+				dst_mac[2] = val[2];
+				dst_mac[3] = val[3];
+				dst_mac[4] = val[4];
+				dst_mac[5] = val[5];
+			}else{
+				trace_printk("interface: %x\n", interface_no);
+			}
+			bpf_skb_store_bytes(skb, offsetof(struct ethhdr, h_source), src_mac, ETH_ALEN, 0);
+			bpf_skb_store_bytes(skb, offsetof(struct ethhdr, h_dest), dst_mac, ETH_ALEN, 0);
 			bpf_clone_redirect(skb, interface->flags, 0);
 		}
     }
