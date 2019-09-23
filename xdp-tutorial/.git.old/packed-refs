@@ -1,0 +1,13 @@
+# pack-refs with: peeled fully-peeled sorted 
+6f77219ab667ff19430d6bcb17836daee6622966 refs/remotes/origin/advanced03-AF_XDP01
+627f7fa5283f45d4de6e1614d78d752b486d4c86 refs/remotes/origin/ansible01-setup
+a7c575976072459e604c0e9ef3710cd6eae4ce4b refs/remotes/origin/common-makefile
+5bd13977a290fd45b24592c313c0f09cae322db6 refs/remotes/origin/master
+51fec4222d7ff19253c71c2cb1ad3437b341aff3 refs/remotes/origin/program-usage-improvements
+84702648454e7f1464451983020c855c08e9302f refs/remotes/origin/tutorial18-hardware-offload
+d03ad3a247c4d9af8dc6bad1d175b2cd714ab38e refs/remotes/origin/tutorial22-xdp-parsing-experiment
+5ff87e083f2f2cb71fb9a0fe1e3798930880e3c3 refs/remotes/origin/tutorial26-advanced
+fa6958c23b8a07fdee3343c872658b611faefceb refs/remotes/origin/tutorial27-advanced-btf
+cd9c0c147cba862d6f330b775421097adc92f1c2 refs/remotes/origin/tutorial29-improve-parsing
+b89ec9362bebec0b985c7541f80c77694ec0ef7c refs/tags/2019-03-18-netdev0x13
+^e5c708bc443089924b2e8c0f1c9dffa083e71117

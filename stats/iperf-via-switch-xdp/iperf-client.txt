@@ -1,0 +1,90 @@
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 50301 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 691022 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 51016 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 691640 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 42866 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 690836 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 60500 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 692821 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 60427 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 690704 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 54488 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 690594 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 42802 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 691970 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 56598 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 691022 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 44706 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 691720 datagrams
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 22 byte datagrams
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.0.1 port 53634 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  14.5 MBytes  12.2 Mbits/sec
+[  3] Sent 692876 datagrams
