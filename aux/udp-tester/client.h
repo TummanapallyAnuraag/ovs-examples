@@ -38,9 +38,9 @@ void client(){
     frac =modf(interval, &intgr);
     frac = frac*1e9;
     T.tv_sec = (long) intgr;
-    // T.tv_nsec = (long) frac - prog_time_correction;
+    T.tv_nsec = (long) frac - prog_time_correction;
     T.tv_nsec = (long) frac;
-    T.tv_sec = 0;T.tv_nsec = 0;
+    // T.tv_sec = 0;T.tv_nsec = 0;
     printf("Req. Interval = %f sec\n", interval);
     printf("Sleeping %ld.%09ld sec, every packet\n", T.tv_sec, T.tv_nsec);
     printf("Sending %d # of pkts\n", no_of_packets);
