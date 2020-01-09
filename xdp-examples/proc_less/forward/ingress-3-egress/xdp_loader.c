@@ -67,6 +67,7 @@ static const struct option_wrapper long_options[] = {
 #endif
 
 const char *pin_basedir =  "/sys/fs/bpf";
+// const char *pin_dir =  "xdp-test";
 const char *map_name    =  "counter";
 
 /* Pinning maps under /sys/fs/bpf in subdir */
@@ -76,7 +77,7 @@ int pin_maps_in_bpf_object(struct bpf_object *bpf_obj, struct config *cfg)
 	int err, len;
 
 	len = snprintf(map_filename, PATH_MAX, "%s/%s/%s",
-		       pin_basedir, "xdp", map_name);
+		       pin_basedir, cfg->pin_dir, map_name);
 	if (len < 0) {
 		fprintf(stderr, "ERR: creating map_name\n");
 		return EXIT_FAIL_OPTION;
@@ -134,7 +135,7 @@ int main(int argc, char **argv)
 		return xdp_link_detach(cfg.ifindex, cfg.xdp_flags, 0);
 	}
 
-	len = snprintf(cfg.pin_dir, PATH_MAX, "%s/%s", pin_basedir, "xdp");
+	len = snprintf(cfg.pin_dir, PATH_MAX, "%s/%s", pin_basedir, cfg.ifname);
 	if (len < 0) {
 		fprintf(stderr, "ERR: creating pin dirname\n");
 		return EXIT_FAIL_OPTION;

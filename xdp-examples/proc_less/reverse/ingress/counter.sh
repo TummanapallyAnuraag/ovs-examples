@@ -42,18 +42,19 @@ cur_inter=$(cat /proc/interrupts | grep enp2s0)
 echo $prev_inter
 echo $cur_inter
 d1=$(( $(echo $cur_inter | cut -d' ' -f2) - $(echo $prev_inter | cut -d' ' -f2) ))
-d2=$(( $(echo $cur_inter | cut -d' ' -f3) - $(echo $prev_inter | cut -d' ' -f3) ))
-d3=$(( $(echo $cur_inter | cut -d' ' -f4) - $(echo $prev_inter | cut -d' ' -f4) ))
-d4=$(( $(echo $cur_inter | cut -d' ' -f5) - $(echo $prev_inter | cut -d' ' -f5) ))
-d5=$(( $(echo $cur_inter | cut -d' ' -f6) - $(echo $prev_inter | cut -d' ' -f6) ))
-d6=$(( $(echo $cur_inter | cut -d' ' -f7) - $(echo $prev_inter | cut -d' ' -f7) ))
-d7=$(( $(echo $cur_inter | cut -d' ' -f8) - $(echo $prev_inter | cut -d' ' -f8) ))
-d8=$(( $(echo $cur_inter | cut -d' ' -f9) - $(echo $prev_inter | cut -d' ' -f9) ))
+#d2=$(( $(echo $cur_inter | cut -d' ' -f3) - $(echo $prev_inter | cut -d' ' -f3) ))
+#d3=$(( $(echo $cur_inter | cut -d' ' -f4) - $(echo $prev_inter | cut -d' ' -f4) ))
+#d4=$(( $(echo $cur_inter | cut -d' ' -f5) - $(echo $prev_inter | cut -d' ' -f5) ))
+#d5=$(( $(echo $cur_inter | cut -d' ' -f6) - $(echo $prev_inter | cut -d' ' -f6) ))
+#d6=$(( $(echo $cur_inter | cut -d' ' -f7) - $(echo $prev_inter | cut -d' ' -f7) ))
+#d7=$(( $(echo $cur_inter | cut -d' ' -f8) - $(echo $prev_inter | cut -d' ' -f8) ))
+#d8=$(( $(echo $cur_inter | cut -d' ' -f9) - $(echo $prev_inter | cut -d' ' -f9) ))
 
 echo ""
 echo "Count Difference:"
 echo "-----------------"
-echo $(( $d1 + $d2 + $d3 + $d4 + $d5 + $d6 + $d7 + $d8 ))
+#echo $(( $d1 + $d2 + $d3 + $d4 + $d5 + $d6 + $d7 + $d8 ))
+echo $(( $d1 ))
 
 echo ""
 echo "resetting the counter!"
