@@ -1,7 +1,30 @@
-## IPERF Experiment with packet length 64
+# USEFUL COMMANDS
 
-[iperf-server](docs/64/iperf-server-xdp.PNG)
+```
+sudo cat /sys/kernel/debug/tracing/trace_pipe
+```
 
-## IPERF Experiment with packet length 1024
+```
 
-[iperf-server](docs/1024/iperf-server-xdp.PNG)
+/*DEFINITION*/
+#define bpf_printk(fmt, ...)                                    \
+({                                                              \
+	char ____fmt[] = fmt;                                   \
+	bpf_trace_printk(____fmt, sizeof(____fmt),              \
+                         ##__VA_ARGS__);                        \
+})
+
+
+/*USAGE*/
+bpf_printk("IPv4\n");
+```
+
+
+# NOTEWORTHY HELPER FUNCTIONS
+
+* `bpf_ntohs`
+
+
+# MISCELLANEOUS
+
+* IP Header Format - <https://en.wikipedia.org/wiki/IPv4#Header>
