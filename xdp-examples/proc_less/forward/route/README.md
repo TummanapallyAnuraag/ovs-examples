@@ -1,3 +1,18 @@
+# SEQUENCE OF OPERATIONS
+
+> For interface `enp2s0`
+
+1. To Attach BPF to `enp2s0` run - `sudo ./xdp_loader -d enp2s0 -S`
+
+2. To Initialize `tx_port` MAP run - `./init.sh enp2s0`
+
+> All BPF MAPS are mapped as filed at `/sys/fs/bpf/`
+> For current BPF Implementation, have a look at `/sys/fs/bpf/enp2s0/`
+
+3. To view debug log run - `sudo cat /sys/kernel/debug/tracing/trace_pipe`
+
+4. To Detach BPF from `enp2s0` run - `sudo ./xdp_loader -d enp2s0 -SU`
+
 # USEFUL COMMANDS
 
 ```
